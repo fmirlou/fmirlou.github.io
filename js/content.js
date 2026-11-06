@@ -13,7 +13,7 @@ window.SITE = {
 
   about: [
     "I design wearable and implantable electronics that read signals from the body: the sensors, the readout circuits, and the power systems that let them run without a battery. My PhD at Koç University focused on a wearable reader platform with power harvesting for continuous health monitoring. Along the way I worked on sweat-sensing patches, smart contact lens electronics and wireless readers for passive sensors.",
-    "After my PhD I worked in sensor technologies R&D at Beko Global, where I led fabrication design and cleanroom characterization of MEMS temperature and pressure sensors in a team of five, with almost 700 devices on each silicon wafer.",
+    "After my PhD I worked in sensor technologies R&D at Beko Global, where the fabrication design and cleanroom characterization of MEMS temperature and pressure sensors were carried out in a team of five, with almost 700 devices on each silicon wafer.",
     "Since March 2026 I have been a postdoctoral research associate at the Max Planck Institute for Informatics in Saarbrücken, working on wearable haptic systems: vibrotactile hardware, perception studies and movement feedback."
   ],
 
