@@ -93,9 +93,9 @@ window.PROJECTS = [
     imageCaption: "The robotic arm used in this project.",
     imageCredit: "Photo: Fariborz Mirlou",
     intro: [
-      "A supernumerary robotic limb is an extra arm worn on the body. Its wearer has to keep track of where it is, which usually means looking at it. This project couples the limb to two vibrotactile actuators (LRAs) on the wearer's arm that vibrate with the limb's motion, so that its position can be felt instead of watched.",
-      "The worn robotic arm moves up and down, with servo actuation, 3D-printed parts and embedded control, and a haptic signal chain drives the actuators. The hardware and control are working. A user study with a working-memory task, comparing visual monitoring of the limb against haptic feedback, is being prepared. The work is in progress at the Max Planck Institute for Informatics, so there are no results to show yet.",
-      "The photo shows the robotic arm. The 3D animation is a schematic of the feedback only. It shows two actuators on a forearm, with the vibration shifting from one to the other like a point moving along the skin. The limb is not drawn there, and the mapping from limb motion to vibration is not shown."
+      "A supernumerary robotic limb is an additional arm worn on the body. To use it effectively, the wearer must keep track of where it is, which usually means keeping it in sight. This project couples the limb to two vibrotactile actuators (LRAs) on the wearer’s arm that vibrate in step with the limb’s motion, so that its position can be felt rather than watched.",
+      "The worn arm moves up and down using servo actuation, 3D-printed parts and embedded control, with a haptic signal chain driving the actuators. The hardware and control are working. A user study with a working-memory task, comparing visual monitoring of the limb with haptic feedback, is in preparation. The work is in progress at the Max Planck Institute for Informatics, so no results are available yet.",
+      "The photo shows the robotic arm. The 3D animation is a schematic of the feedback only: two actuators on a forearm, with the vibration shifting from one to the other like a point moving along the skin."
     ],
     sections: [],
     gallery: [],
