@@ -1,0 +1,13 @@
+{
+  "name": "portfolio-3d-scene",
+  "private": true,
+  "description": "Only needed to rebuild js/scene3d.bundle.js and js/models.bundle.js from src/",
+  "scripts": {
+    "build": "esbuild src/scene3d.js --bundle --minify --format=iife --target=es2018 --outfile=js/scene3d.bundle.js && esbuild src/models.js --bundle --minify --format=iife --target=es2018 --outfile=js/models.bundle.js",
+    "meta": "node scripts/sync-meta.js"
+  },
+  "devDependencies": {
+    "esbuild": "latest",
+    "three": "0.160.0"
+  }
+}
