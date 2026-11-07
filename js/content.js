@@ -173,7 +173,7 @@ window.PROJECTS = [
     imageCaption: "The fabricated sensor under the optical microscope.",
     imageCredit: "Photo: Fariborz Mirlou",
     intro: [
-      "As a senior engineer in sensor technologies R&D at Beko Global, I led fabrication design and cleanroom characterization of MEMS temperature and pressure sensors in a team of five. Batches were made at almost 700 devices per silicon wafer. This is one of the temperature sensors from that work, seen under the optical microscope after fabrication.",
+      "At Beko Global, MEMS temperature and pressure sensors were developed in sensor technologies R&D by a team of five, with fabrication design and cleanroom characterization under my responsibility as a senior engineer. Batches reached almost 700 devices per silicon wafer. The image shows one of the temperature sensors from this work under the optical microscope after fabrication.",
       "Two large pads at the top connect to the patterned structure below, which combines long parallel lines with arrays of square openings. The 3D animation is a simplified, generic thin-film process (oxide, metal film, photoresist, exposure through a mask, development, etching and stripping) with a pattern drawn after the photo. It is a schematic, not the exact process flow, and the details of the design, the materials and the measured performance are not shown here."
     ],
     sections: [],
