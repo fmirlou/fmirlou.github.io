@@ -8,7 +8,6 @@
   const body = document.body;
   const base = body.dataset.base || "";
   const page = body.dataset.page;
-  const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   /* ---------- tiny DOM helper ---------- */
   const el = (tag, attrs = {}, ...kids) => {
@@ -33,7 +32,7 @@
 
   /* ---------- theme ---------- */
   const currentTheme = () => document.documentElement.dataset.theme || "dark";
-  const THEME_COLOR = { dark: "#0A1428", light: "#F5F7FC" };
+  const THEME_COLOR = { dark: "#0B1821", light: "#F5F6F2" };
   const syncThemeColor = () => {
     const meta = document.querySelector('meta[name="theme-color"]');
     if (meta) meta.setAttribute("content", THEME_COLOR[currentTheme()]);
@@ -258,21 +257,19 @@
 
     const cards = PROJECTS.map((p) => {
       const media = el("div", { class: "card-media" });
-      /* a small 3D model of the device; the paper photo sits in the corner. Without WebGL the photo is shown instead. */
-      let modelOn = false;
-      if (p.model && window.Models) {
-        const box = el("div", { class: "card-model ph", style: `--hue:${p.hue ?? 220}`, "aria-hidden": "true" });
-        media.append(box);
-        modelOn = !!window.Models.mount(box, p.model, { interactive: false });
-        if (!modelOn) box.remove();
-      }
-      if (modelOn) {
-        if (p.image) media.append(el("img", { class: "card-photo", src: base + p.image, alt: p.imageAlt || "", loading: "lazy", decoding: "async" }));
-        media.classList.add("has-model");
-      } else media.append(imgOrPlaceholder(p, "card-img"));
+      /* The card sketch is illustrative; the actual project photograph remains on its detail page. */
+      media.append(el("div", { class: "card-img" },
+        el("img", {
+          src: `${base}assets/img/illustrations/${p.slug}.jpg`,
+          alt: `Concept illustration for ${p.title}`,
+          loading: "lazy", decoding: "async"
+        })
+      ));
+      media.append(el("span", { class: "card-art-label", "aria-hidden": "true" }, "Concept illustration"));
       return el("a", { class: "card", href: `${base}projects/${p.slug}.html`, "data-tags": p.tags.join("|") },
         media,
         el("div", { class: "card-body" },
+          el("span", { class: "card-kind" }, p.status || p.tags[0] || "Research project"),
           el("div", { class: "card-title" }, el("h3", {}, p.title), el("span", { class: "year" }, String(p.year))),
           el("p", {}, p.summary),
           el("ul", { class: "tags" }, p.tags.map((t) => el("li", {}, t)))
@@ -296,31 +293,11 @@
       cards.forEach((c) => {
         const show = tag === "All" || c.dataset.tags.split("|").includes(tag);
         c.hidden = !show;
-        if (show) c.dataset.slot = String(i++ % 4);
+        if (show) i++;
       });
       if (count) count.textContent = `${i} project${i === 1 ? "" : "s"} shown`;
     }
     apply("All");
-
-    /* gentle 3D tilt that follows the pointer */
-    if (matchMedia("(hover: hover)").matches && !reduceMotion) {
-      cards.forEach((c) => {
-        const media = c.querySelector(".card-media");
-        const img = c.querySelector(".card-img");
-        if (!img) return;
-        c.addEventListener("pointermove", (e) => {
-          const r = media.getBoundingClientRect();
-          const x = (e.clientX - r.left) / r.width - 0.5;
-          const y = (e.clientY - r.top) / r.height - 0.5;
-          img.style.setProperty("--rx", (-y * 5).toFixed(2) + "deg");
-          img.style.setProperty("--ry", (x * 7).toFixed(2) + "deg");
-        });
-        c.addEventListener("pointerleave", () => {
-          img.style.setProperty("--rx", "0deg");
-          img.style.setProperty("--ry", "0deg");
-        });
-      });
-    }
   }
 
   /* ---------- project page ---------- */
@@ -352,6 +329,7 @@
       }
       if (p.image) {
         wrapV.append(el("figure", { class: "p-photo" },
+          el("span", { class: "photo-kicker" }, "Real project image"),
           el("img", { src: base + p.image, alt: p.imageAlt || "", decoding: "async" }),
           el("figcaption", {}, p.imageCaption || "", p.imageCredit ? el("span", {}, p.imageCredit) : null)));
       }
