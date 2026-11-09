@@ -57,7 +57,7 @@ window.SITE = {
 window.SITE.education = [
   { when: "2020 \u2013 2024", title: "Ph.D., Biomedical Sciences and Engineering"},
   { when: "2015 \u2013 2017", title: "M.Sc., Photonics Engineering"},
-  { when: "2010 \u2013 2014", title: "B.Sc., Electrical and Electronics Engineering"},
+  { when: "2010 \u2013 2013", title: "B.Sc., Electrical and Electronics Engineering"},
 ];
 
 window.SITE.experience = [
