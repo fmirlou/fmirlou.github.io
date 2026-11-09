@@ -22,7 +22,7 @@
   <meta name="twitter:image" content="https://fmirlou.github.io/assets/img/og/home.png">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Fariborz Mirlou","jobTitle":"Postdoctoral Research Associate","worksFor":{"@type":"Organization","name":"Max Planck Institute for Informatics"},"alumniOf":{"@type":"CollegeOrUniversity","name":"Koç University"},"sameAs":["https://scholar.google.com/citations?user=7euAHnEAAAAJ&hl=en"],"url":"https://fmirlou.github.io/"}</script>
   <!-- meta:end -->
-  <meta name="theme-color" content="#0A1428">
+  <meta name="theme-color" content="#0B1821">
   <script>
     /* Apply the saved or system theme before first paint to avoid a flash. */
     (function () {
@@ -51,14 +51,16 @@
         <article class="chapter chapter-intro" id="top" data-label="Intro">
           <div class="chapter-inner">
             <div class="panel">
+              <p class="hero-eyebrow">Research portfolio <span aria-hidden="true">/</span> Fariborz Mirlou</p>
               <h1 class="hero-name" id="hero-title" data-site="name">Fariborz Mirlou</h1>
               <p class="hero-role" data-site="role"></p>
               <p class="hero-tagline" data-site="tagline"></p>
+              <p class="hero-focus">Wearable sensing <span aria-hidden="true">·</span> Wireless systems <span aria-hidden="true">·</span> Haptics</p>
               <div class="hero-actions">
-                <a class="btn btn-primary" href="#work">See my projects</a>
+                <a class="btn btn-primary" href="#work">Explore the research <span aria-hidden="true">↗</span></a>
                 <a class="btn" href="#contact">Get in touch</a>
               </div>
-              <p class="scroll-cue">Scroll to build the device</p>
+              <p class="scroll-cue">Scroll to explore the research story and build the device.</p>
             </div>
           </div>
         </article>
@@ -115,7 +117,11 @@
     <section class="section" id="work" aria-labelledby="work-title">
       <div class="wrap">
         <div class="section-head">
-          <h2 id="work-title">Projects</h2>
+          <div>
+            <p class="section-kicker">Selected research</p>
+            <h2 id="work-title">Projects and prototypes</h2>
+            <p class="section-lede">Devices for sensing, wireless readout, and touch. These sketches introduce the work; open a project for the real image, research context, and an interactive model where available.</p>
+          </div>
           <div class="filters" id="project-filters" role="group" aria-label="Filter projects by topic"></div>
         </div>
         <p class="sr-only" id="grid-count" aria-live="polite"></p>
@@ -158,9 +164,23 @@
   <script src="js/content.js"></script>
   <script src="js/news.js"></script>
   <script src="js/publications.js"></script>
-  <script src="js/models.bundle.js"></script>
   <script src="js/main.js"></script>
-  <script src="js/scene3d.bundle.js"></script>
-  <script src="js/build.js"></script>
+  <script>
+    /* Keep the reading experience and project grid responsive while the optional 3D story loads. */
+    (function () {
+      if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      var start = function () {
+        var controller = document.createElement("script");
+        controller.src = "js/build.js";
+        document.body.append(controller);
+      };
+      if (/[?&]2d\b/.test(location.search)) { start(); return; }
+      var scene = document.createElement("script");
+      scene.src = "js/scene3d.bundle.js";
+      scene.onload = start;
+      scene.onerror = start;
+      document.body.append(scene);
+    })();
+  </script>
 </body>
 </html>
