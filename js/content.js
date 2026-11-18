@@ -7,14 +7,15 @@
 window.SITE = {
   name: "Fariborz Mirlou",
   role: "Postdoctoral Research Associate, Max Planck Institute for Informatics",
-  metaTitle: "Fariborz Mirlou · Wearable and Implantable electronics, sensors and haptics",
+  metaTitle: "Fariborz Mirlou · Wearable and implantable bioelectronics and haptics",
   metaDescription: "Postdoctoral research associate at the Max Planck Institute for Informatics. Wearable electronics for sensing and touch: battery-free sensors, flexible readers, microneedle and sweat patches, and haptic interfaces.",
   tagline: "Wearable electronics for sensing and touch, from sweat-sensing patches for biomarkers to haptic interfaces.",
 
   about: [
-    "I design wearable and implantable electronics that read signals from the body: the sensors, the readout circuits, and the power systems that let them run without a battery. My PhD at Koç University focused on a wearable reader platform with power harvesting for continuous health monitoring. Along the way I worked on sweat-sensing patches, smart contact lens electronics and wireless readers for passive sensors.",
+    "I design wearable and implantable electronics that read signals from the body: the sensors, the readout circuits, and the power systems that let them run without a battery. My PhD at Koç University focused on a wearable reader platform with power harvesting for continuous health monitoring. Along the way I worked on sweat-sensing patches, microneedle patches for interstitial fluid, smart contact lens electronics and wireless readers for passive sensors.",
     "After my PhD I worked in sensor technologies R&D at Beko Global, where the fabrication design and cleanroom characterization of MEMS temperature and pressure sensors were carried out in a team of five, with almost 700 devices on each silicon wafer.",
-    "Since March 2026 I have been a postdoctoral research associate at the Max Planck Institute for Informatics in Saarbrücken, working on wearable haptic systems: vibrotactile hardware, perception studies and movement feedback."
+    "Since March 2026 I have been a postdoctoral research associate at the Max Planck Institute for Informatics in Saarbrücken, working on wearable haptic systems: vibrotactile hardware, perception studies and movement feedback.",
+    "My goal is to build a research group on wearable and implantable bioelectronics: battery-free sensors on and in the body, closed-loop systems that sense biomarkers in interstitial fluid and respond to them, and haptic feedback that returns information to the wearer, for example from prosthetic and robotic limbs."
   ],
 
   facts: [
@@ -47,7 +48,7 @@ window.SITE = {
     { group: "Microfabrication and cleanroom", items: ["Laser micromachining", "High-precision 3D printing", "PECVD / CVD", "Parylene C coating", "Maskless lithography", "Mask alignment", "Screen printing", "Profilometry", "Confocal microscopy", "Wet and dry etching"] },
   ],
 
-  links: [] /* add { label: "GitHub", href: "https://..." } entries here */
+    links: [ { label: "CV (PDF)", href: "assets/FM_CV.pdf" } ]
 };
 
 /*
@@ -67,6 +68,8 @@ window.SITE.experience = [
     note: "Led fabrication design and cleanroom characterization of MEMS temperature and pressure sensors in a team of five, with almost 700 sensors per wafer and performance comparable to off-the-shelf products. Part of a team that reached the top eight in the company's Fast Track 2.0 competition, and completed the Six Sigma Green Belt." },
   { when: "2021 \u2013 2026", title: "Cleanroom Researcher", where: "n2STAR, Istanbul",
     note: "Superuser of laser micromachining, PECVD, CVD, Parylene C coating, maskless lithography, mask alignment, profilometry, confocal microscopy, and wet and dry etching benches." },
+  { when: "2020 \u2013 2024", title: "PhD Researcher", where: "Koç University, Istanbul",
+    note: "Wireless, battery-free and energy-harvesting wearables for sweat, interstitial-fluid and food monitoring, tested in vitro, in vivo and on the body." },
 ];
 
 /*
@@ -94,7 +97,7 @@ window.PROJECTS = [
     imageCredit: "Photo: Fariborz Mirlou",
     intro: [
       "A supernumerary robotic limb is an additional arm worn on the body. To use it effectively, the wearer must keep track of where it is, which usually means keeping it in sight. This project couples the limb to two vibrotactile actuators (LRAs) on the wearer’s arm that vibrate in step with the limb’s motion, so that its position can be felt rather than watched.",
-      "The worn arm moves up and down using servo actuation, 3D-printed parts and embedded control, with a haptic signal chain driving the actuators. The hardware and control are working. A user study with a working-memory task, comparing visual monitoring of the limb with haptic feedback, is in preparation. The work is in progress at the Max Planck Institute for Informatics, so no results are available yet.",
+      "The worn arm moves up and down using servo actuation, 3D-printed parts and embedded control, with a haptic signal chain driving the actuators. The hardware and control are working. A user study with a working-memory task, comparing visual monitoring of the limb with haptic feedback, is in preparation. The work is in progress at the Max Planck Institute for Informatics, results will follow from the user study.",
       "The photo shows the robotic arm. The 3D animation is a schematic of the feedback only: two actuators on a forearm, with the vibration shifting from one to the other like a point moving along the skin."
     ],
     sections: [],
@@ -173,7 +176,7 @@ window.PROJECTS = [
     imageCaption: "The fabricated sensor under the optical microscope.",
     imageCredit: "Photo: Fariborz Mirlou",
     intro: [
-      "At Beko Global, MEMS temperature and pressure sensors were developed in sensor technologies R&D by a team of five, with fabrication design and cleanroom characterizations. Batches reached almost 700 devices per silicon wafer. The image shows one of the temperature sensors from this work under the optical microscope after fabrication.",
+      "At Beko Global, I was responsible for the fabrication design and cleanroom characterization of MEMS temperature and pressure sensors in a team of five. Batches reached almost 700 devices per silicon wafer. The image shows one of the temperature sensors from this work under the optical microscope after fabrication.",
       "Two large pads at the top connect to the patterned structure below, which combines long parallel lines with arrays of square openings. The 3D animation is a simplified, generic thin-film process (oxide, metal film, photoresist, exposure through a mask, development, etching and stripping) with a pattern drawn after the photo. It is a schematic, not the exact process flow, and the details of the design, the materials and the measured performance are not shown here."
     ],
     sections: [],
@@ -194,7 +197,7 @@ window.PROJECTS = [
     imageCaption: "The patch on the wrist (Fig. 1a of the paper).",
     imageCredit: "Mirlou et al., Advanced Materials Technologies, 2024",
     intro: [
-      "Low blood sugar can happen without symptoms, and most wearable glucose sensors do not track heart-rate variability which is an early sign of it. This 4 cm flexible patch measures sweat glucose through a microfluidic channel and a screen-printed sensor, with a limit of detection of 8.9 µM. It also records body temperature and HRV from a red and near-infrared optical module. It harvests 2.45 GHz Wi-Fi energy into a rechargeable battery, sends data over Bluetooth, and was validated in on-body experiments."
+      "Low blood sugar can happen without symptoms, and most wearable glucose sensors do not track heart-rate variability, which can be an early sign of it. This 4 cm flexible patch measures sweat glucose through a microfluidic channel and a screen-printed sensor, with a limit of detection of 8.9 µM. It also records body temperature and HRV from a red and near-infrared optical module. It harvests 2.45 GHz Wi-Fi energy into a rechargeable battery, sends data over Bluetooth, and was validated in on-body experiments."
     ],
     sections: [],
     gallery: [],
@@ -243,7 +246,7 @@ window.PROJECTS = [
     title: "A wireless sensor that tells when food spoils",
     year: 2023,
     venue: "Nature Food, 2023",
-    summary: "A 2 \u00d7 2 cm battery-free sensor that can be read by a phone reads over NFC to tell whether the food is spoiling.",
+    summary: "A 2 \u00d7 2 cm battery-free sensor that a phone reads over NFC to tell whether food is spoiling.",
     tags: ["Wireless", "Sensing", "Fabrication"],
     hue: 118,
     model: "food",
