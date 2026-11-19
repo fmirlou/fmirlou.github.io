@@ -5,7 +5,7 @@
 */
 window.NEWS = [
   { date: "2026-11", text: "Reviewing for Augmented Humans 2027." },
-  { date: "2026-07", text: "Attended EuroHaptics 2026 in Siena, Italy, and took part workshops and talks." },
+  { date: "2026-07", text: "Attended EuroHaptics 2026 in Siena, Italy, and took part in workshops and talks." },
   { date: "2026-03", text: "Joined the Max Planck Institute for Informatics as a postdoctoral research associate, working on wearable haptic systems." },
   { date: "2025", text: "Paper published in IEEE Transactions on Molecular, Biological and Multi-Scale Communications: a one-dollar testbed for molecular communication.",
     link: { label: "Project page", href: "projects/molecular-comms-testbed.html" } },
