@@ -61,6 +61,9 @@
               </div>
               <p class="scroll-cue">Scroll to explore the research story and build the device.</p>
             </div>
+            <figure class="hero-portrait">
+              <img src="assets/img/profile.jpg" alt="Portrait of Fariborz Mirlou" width="1000" height="1000" decoding="async">
+            </figure>
           </div>
         </article>
 
@@ -164,6 +167,39 @@
   <script src="js/news.js"></script>
   <script src="js/publications.js"></script>
   <script src="js/main.js"></script>
+  <script>
+    /* Fade the hero portrait out as the reader scrolls toward About. */
+    (function () {
+      var portrait = document.querySelector(".hero-portrait");
+      var intro = document.getElementById("top");
+      var about = document.getElementById("about");
+      if (!portrait || !intro || !about || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      function smooth(t) {
+        t = Math.max(0, Math.min(1, t));
+        return t * t * (3 - 2 * t);
+      }
+      function anchor(el) {
+        var rect = el.getBoundingClientRect();
+        var header = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--header-h")) || 64;
+        return rect.top + window.scrollY + rect.height / 2 - (header + (window.innerHeight - header) / 2);
+      }
+      var pending = false;
+      function update() {
+        pending = false;
+        var progress = (window.scrollY - anchor(intro)) / (anchor(about) - anchor(intro));
+        portrait.style.opacity = (1 - smooth((progress - 0.18) / 0.38)).toFixed(3);
+      }
+      function schedule() {
+        if (!pending) {
+          pending = true;
+          requestAnimationFrame(update);
+        }
+      }
+      schedule();
+      window.addEventListener("scroll", schedule, { passive: true });
+      window.addEventListener("resize", schedule, { passive: true });
+    })();
+  </script>
   <script>
     /* Keep the reading experience and project grid responsive while the optional 3D story loads. */
     (function () {
