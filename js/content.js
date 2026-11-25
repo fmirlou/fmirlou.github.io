@@ -65,7 +65,7 @@ window.SITE.experience = [
   { when: "2026 \u2013 now", title: "Postdoctoral Research Associate", where: "Max Planck Institute for Informatics, Saarbrücken",
     note: "Wearable haptic systems: vibrotactile actuator arrays and drive electronics, perception studies, and haptic feedback for movement, including a supernumerary robotic limb." },
   { when: "2024 \u2013 2026", title: "Sensor Technologies R&D, Senior Engineer", where: "Beko Global, Istanbul",
-    note: "Led fabrication design and cleanroom characterization of MEMS temperature and pressure sensors in a team of five, with almost 700 sensors per wafer and performance comparable to off-the-shelf products. Part of a team that reached the top eight in the company's Fast Track 2.0 competition, and completed the Six Sigma Green Belt." },
+    note: "Led fabrication design and cleanroom characterization of MEMS temperature and pressure sensors in a team of five, with almost 700 sensors per wafer and performance comparable to off-the-shelf products." },
   { when: "2021 \u2013 2026", title: "Cleanroom Researcher", where: "n2STAR, Istanbul",
     note: "Superuser of laser micromachining, PECVD, CVD, Parylene C coating, maskless lithography, mask alignment, profilometry, confocal microscopy, and wet and dry etching benches." },
   { when: "2020 \u2013 2024", title: "PhD Researcher", where: "Koç University, Istanbul",
