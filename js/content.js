@@ -223,7 +223,7 @@ window.PROJECTS = [
     model: "needle",
     image: "assets/img/projects/microneedle-isf.jpg",
     imageAlt: "Photograph of the hollow-microneedle patch held in a gloved hand",
-    imageCaption: "The microneedle patch with its electrode lines (Fig. 1e of the paper).",
+    imageCaption: "The microneedle patch with its electrode lines (Fig. 1a of the paper).",
     imageCredit: "Abbasiasl et al., Advanced Materials, 2024",
     intro: [
       "Interstitial fluid (ISF) under the skin reflects blood chemistry, but it is hard to collect. This patch uses laser-drilled hollow microneedles, in arrays from 3 \u00d7 3 to 9 \u00d7 9, and a soft silicone chamber that works as a pump. Pressing it with a finger and letting go creates a vacuum of about \u221253 kPa through two passive check valves. That draws roughly 2 \u00b5L of fluid per needle per hour into a microfluidic chamber with screen-printed electrodes, which measure glucose and pH. It was tested ex vivo and in animal models."
